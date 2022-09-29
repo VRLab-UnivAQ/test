@@ -119,9 +119,10 @@
 		<a-entity  class="sensor" geometry="primitive:cylinder; radius: 0.5; height: 1.5" material="metalness: 1; roughness: 0.5" sound="src: url(assets/ray-sound.mp3); autoplay: false" position="40.0 0 30.0"></a-entity>
 		<a-entity  class="sensor" geometry="primitive:cylinder; radius: 0.5; height: 1.5" material="metalness: 1; roughness: 0.5" sound="src: url(assets/ray-sound.mp3); autoplay: false" position="40.0 0 40.0"></a-entity>
 		<a-entity  id="cone" geometry="primitive: cone; height: 0; openEnded: true; radiusTop: 0.1; radiusBottom: 10" position="0 -10 0" rotation="0 0 0" material="src: #cosmic-ray; transparent: true; emissive: #ffffff" animation__beamStart="dur: 2000; easing: easeInOutQuad; property: geometry.height; to: 820; startEvents: beamStart" animation__beamEnd="dur: 0; property: geometry.height; to: 0; startEvents: beamEnd"></a-entity>
-		<a-entity  id="player" avatar="model: #avatar">
+		<a-entity  avatar="model: #avatar"></a-entity>
+		<a-entity  id="player">
 			<a-camera  id="head" near="0.1" wasd-controls  look-controls ></a-camera>
-			<a-entity  id="leftHand" oculus-touch-controls="hand: left" blink-controls  track-controls="hand: left"></a-entity>
+			<a-entity  id="leftHand" oculus-touch-controls="hand: left" blink-controls  tracked-controls="hand: left"></a-entity>
 			<a-entity  id="rightHand" oculus-touch-controls="hand: right" tracked-controls="hand: right"></a-entity>
 		</a-entity>
 		<a-sky  src="https://live.staticflickr.com/65535/52216882630_eb6b2a08b1_6k.jpg"></a-sky>
